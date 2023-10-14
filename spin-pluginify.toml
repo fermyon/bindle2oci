@@ -1,0 +1,7 @@
+name = "bindle2oci"
+description = "Migrate Spin applications from Bindle to an OCI registry."
+version = "0.1"
+spin_compatibility = "=1"
+license = "Apache-2.0"
+homepage = "https://github.com/fermyon/bindle2oci"
+package = "./target/release/bindle2oci"

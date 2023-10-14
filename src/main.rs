@@ -4,7 +4,7 @@ use clap::Parser;
 #[derive(Parser)]
 struct Cli {
     /// ID of application bindle.
-    #[clap(long = "bindle-id")]
+    #[clap(long = "bindle")]
     pub bindle_id: String,
 
     /// URL of bindle server.
