@@ -2,12 +2,6 @@
 
 Migrate Spin applications from Bindle to an OCI registry.
 
-## Install from release
-
-```
-spin plugins install --url https://github.com/fermyon/bindle2oci/releases/download/canary/bindle2oci.json
-```
-
 ## Build from source
 
 You will need Rust and the `pluginify` plugin (`spin plugins install --url https://github.com/itowlson/spin-pluginify/releases/download/canary/pluginify.json`).
