@@ -57,6 +57,10 @@ async fn main() -> anyhow::Result<()> {
         .await
         .context("failed to build an OCI client")?;
 
+    // While the spin-oci crate is pinned to an earlier version, this env var is needed
+    // to properly handle empty/tiny files
+    std::env::set_var("SPIN_OCI_SKIP_INLINED_FILES", "true");
+
     oci_client
         .push(&app, cli.reference)
         .await
