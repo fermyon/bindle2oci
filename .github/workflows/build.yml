@@ -37,10 +37,10 @@ jobs:
         with:
           toolchain: 1.73
           targets: ${{ matrix.config.target }},wasm32-wasi,wasm32-unknown-unknown
-      - name: Install Spin
-        uses: rajatjindal/setup-actions/spin@main
+      - name: Setup Spin
+        uses: fermyon/actions/spin/setup@v1
         with:
-          version: "v0.8.0"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install pluginify
         shell: bash
         run: spin plugins install --url https://github.com/itowlson/spin-pluginify/releases/download/canary/pluginify.json --yes
@@ -73,10 +73,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Install Spin
-        uses: rajatjindal/setup-actions/spin@main
+      - name: Setup Spin
+        uses: fermyon/actions/spin/setup@v1
         with:
-          version: "v0.8.0"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install pluginify
         shell: bash
         run: spin plugins install --url https://github.com/itowlson/spin-pluginify/releases/download/canary/pluginify.json --yes
