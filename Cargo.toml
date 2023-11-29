@@ -11,6 +11,9 @@ async-trait = "0.1.73"
 clap = { version = "4.4.6", features = ["derive", "env"] }
 reqwest = "0.11.22"
 tokio = { version = "1.33.0", features = ["full"] }
+
+# Use a fork that has bindle auth options and has the fix for OCI max layer
+# issue
 spin-loader = { git = "https://github.com/adamreese/spin", branch = "bindle-auth" }
 spin-oci = { git = "https://github.com/adamreese/spin", branch = "bindle-auth" }
 tempfile = "3.8.0"
@@ -24,4 +27,5 @@ features = ["client"]
 [patch.crates-io]
 # Using fork to bump nested dep sqlite3-parser to 0.9.0 for Windows build fix
 # Pending related upstream PR https://github.com/libsql/libsql-client-rs/pull/32
-libsql-client = { git = "https://github.com/vdice/libsql-client-rs", branch = "chore/bump-deps"}
+libsql-client = { git = "https://github.com/vdice/libsql-client-rs", branch = "chore/bump-deps" }
+
